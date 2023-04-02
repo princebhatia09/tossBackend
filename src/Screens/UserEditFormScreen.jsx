@@ -56,8 +56,8 @@ export const UserEditForm = (props)=>{
     const [state, setState] = useState({
         ...props.row,
       });
-      const {updateJob,isLoading,sucData} = useUpdateAllJobs()
-      const {deleteUser,delData} = useDeleteUser()
+      const {updateJob,isLoading} = useUpdateAllJobs()
+      const {deleteUser} = useDeleteUser()
 
       const handleChange = useCallback((event) => {
     

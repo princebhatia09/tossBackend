@@ -1,7 +1,4 @@
-import { svsPut } from "../http/http-common"
 import React,{ useState } from "react"
-import { UpdateAllJobs } from "../http/fetchAlljobs";
-// import { useForm } from "react-hook-form"
 
 const withUseFormHoc = (Component)=>{
 

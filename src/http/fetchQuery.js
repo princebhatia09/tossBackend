@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react";
 import { useMutation } from "react-query";
-import apiClient, { svcGet } from "../http/http-common";
+import apiClient from "../http/http-common";
 import {useNavigate} from "react-router-dom"
 
 const useFetchData = () => {
   const [result, setResult] = useState();
-  const [error, setError] = useState();
+  const [error] = useState();
   const navigate = useNavigate()
 
 
@@ -16,13 +16,7 @@ const useFetchData = () => {
         password: password,
       });
     },
-    // {
-    //   onError: (err) => {
-    //     console.log(err);
-    //     setError(err.response?.data || err);
-        
-    //   },
-    // },
+
     {
       onSuccess: (res) => {
         console.log(res)

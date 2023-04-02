@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import withUseFormHoc from "../Components/FormHOC";
 import HeaderScreen from "./HeaderScreen";
 import styled from "styled-components";
-import { Controller, useForm } from "react-hook-form";
 import { useDeleteJobs, useUpdateAllJobs } from "../http/fetchAlljobs";
 import { Loader } from "../Loader/Loader";
 
@@ -52,15 +51,11 @@ const Submit = styled.button`
 `;
 
 const FormScreen = (props) => {
-  const { onSubmit,message } = props;
-  
-  const [confirm, setconfirm] = useState(false);
-
   const [state, setState] = useState({
     ...props.row,
   });
-  const {updateJob,isLoading,sucData} = useUpdateAllJobs()
-  const {deleteJob,delData} = useDeleteJobs()
+  const {updateJob,isLoading} = useUpdateAllJobs()
+  const {deleteJob} = useDeleteJobs()
 
   const handleChange = useCallback((event) => {
 

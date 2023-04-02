@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types"
 import {useFetchUserData} from "../Components/useUserData";
-import { connect } from "react-redux";
 import { Loader } from "../Loader/Loader";
 import { useTableFactory } from "../Components/Table/useTableFactory";
 import { UserListDefs } from "../Components/Table/UserTable";
 import HeaderScreen from "./HeaderScreen";
 import Table from "./Table";
-import { useCallback } from "react";
 import { useState } from "react";
 import { UserEditForm } from "./UserEditFormScreen";
 

@@ -54,11 +54,6 @@ export const useTableFactory = ({ TableListDefs, Data }) => {
       return <StyledTh key={index}>{key}</StyledTh>;
     });
   };
-
-  const handleRowClick = (row) => {
-    setSelectedRow(row);
-    SetVisibility(true);
-  };
   
   const renderTbody = () => {
     return tableData?.map((row, index) => {

@@ -56,8 +56,8 @@ export const PromoterEditForm = (props)=>{
         ...props.row,
       });
       console.log(state)
-      const {updateJob,isLoading,sucData} = useUpdatePromoter()
-      const {deleteUser,delData} = useDeletePromoter()
+      const {updateJob,isLoading} = useUpdatePromoter()
+      const {deleteUser} = useDeletePromoter()
 
       const handleChange = useCallback((event) => {
     

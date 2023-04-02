@@ -1,6 +1,5 @@
 import React,{useState} from "react";
 import styled,{css} from "styled-components";
-import FormScreen from "./FormScreen";
 import HeaderScreen from "./HeaderScreen";
 
 const Container = styled.div`
@@ -15,8 +14,7 @@ const Container = styled.div`
     background-color: #efefef;
     transform: translateX(100%);
     transition: transform .9s ease-out;
-    ${props => props.visible && css`
-    transform: translateX(0);`}
+    ${props => props.visible && css `transform: translateX(0);`}
     
 
 `
@@ -51,7 +49,7 @@ const FormContainer = styled.div`
 `
 
 const SideEditPanel = ({row,visiblity,SetVisiblity,title,Children})=>{
-    const[visible,SetcomVisiblity] = useState(visiblity)
+    const[SetcomVisiblity] = useState(visiblity)
 
     const handleVisibility = (value)=>{
         SetVisiblity(value)

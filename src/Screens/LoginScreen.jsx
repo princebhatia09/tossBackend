@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import styled from "styled-components"
 import useFetchData from "../http/fetchQuery"
@@ -54,10 +53,6 @@ export const LoginScreen = () => {
     if(isLoading){
         return <Loader/>
     }
-    // if(error){
-    //     return <Loader/>
-    // }
-
   return (
     <Container>
         <Header>
