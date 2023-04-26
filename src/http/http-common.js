@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://localhost:5000/api"
+const BASE_URL = "https://seahorse-app-xhc7g.ondigitalocean.app/api"
 
 export default axios.create({
     baseURL: BASE_URL,
