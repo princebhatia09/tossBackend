@@ -16,7 +16,6 @@ const useFetchData = () => {
         password: password,
       });
     },
-
     {
       onSuccess: (res) => {
         console.log(res)
